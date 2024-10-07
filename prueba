@@ -1,0 +1,11 @@
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+public class EmpleadoTest {
+    @Test
+    public void testModificarEmpleado() {
+        Empleado empleado = new Empleado(1, "Juan", "permanente", 3000);
+        empleado.modificar("Juan Pérez", "temporal", 2500);
+        assertEquals("Juan Pérez", empleado.getNombre());
+    }
+}
